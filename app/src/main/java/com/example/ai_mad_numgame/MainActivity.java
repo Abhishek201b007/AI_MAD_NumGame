@@ -198,7 +198,12 @@ public class MainActivity extends AppCompatActivity {
     public String getInterpretation(int [][]dataFrame,double slope){
        //provide interpretation based on your slope analysis
         // Your code here
+        double myslope = LR.getSlope(dataFrame);
+        if(myslope<0) return "you are not sciencer";
+        else if(myslope>0 && myslope <0.5) return "you are slow but steady";
+        else if(myslope>0.5 && myslope <1 ) return "playing good";
+        else return "positive slope";
 
-        return "Your Interpretation";
+        //return "Your Interpretation";
     }
 }
